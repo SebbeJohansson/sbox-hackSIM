@@ -1,0 +1,35 @@
+@using Sandbox;
+@using Sandbox.UI;
+
+@inherits Panel
+
+@attribute [StyleSheet]
+
+<root>
+	<div class="output-line">
+		<span>CONTENT CONTENT CONTENT</span>
+	</div>
+	@foreach (var entry in Lines)
+	{
+		<div class="output-line">
+			<span>@entry</span>
+		</div>
+	}
+</root>
+
+
+@code {
+	private List<string> Lines = new List<string>();
+
+	public void AddLine(string text)
+	{
+		Log.Info("Adding line: " + text);
+		Lines.Add(text);
+	}
+	
+    /// <summary>
+    /// The BuildHash method determines if the system should be rebuilt.
+    /// If it changes, the system will be rebuilt.
+    /// </summary>
+    protected override int BuildHash() => System.HashCode.Combine(Lines.Count);
+}

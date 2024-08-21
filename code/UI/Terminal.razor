@@ -1,0 +1,19 @@
+@using Sandbox;
+@using Sandbox.UI;
+@attribute [StyleSheet ("./Terminal.scss")]
+
+<root class="terminal">
+	<div class="title">My terminal</div>
+	<TerminalOutput @ref="Output"/>
+	<TerminalInput />
+</root>
+
+@code {
+	private TerminalOutput Output;
+
+	public void OnTextSubmit(string text)
+	{
+		Log.Info("Text submitted: " + text);
+		Output.AddLine(text);
+	}
+}

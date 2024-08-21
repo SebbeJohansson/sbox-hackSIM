@@ -1,0 +1,46 @@
+@using Sandbox;
+@using Sandbox.UI;
+
+@inherits Panel
+
+@attribute [StyleSheet]
+
+<root>
+	<span class="prefix"> This is the prefix ></span>
+	<TextEntry MaxLength=@(150) @ref="InputBox" onsubmit="@OnTextSubmit" @CaretColor="#0af149"></TextEntry>
+</root>
+
+
+@code {
+	private string Text = "Type here";
+
+	private TextEntry InputBox;
+
+
+    protected override void OnAfterTreeRender( bool firstTime )
+    {
+        if ( firstTime )
+        {
+			InputBox.Focus();
+			InputBox.Placeholder = Text;
+        }
+    }
+
+	@* TerminalInput()
+	{
+		_textEntry.Focus();
+		_textEntry.Placeholder = _text;
+	} *@
+
+	private void OnTextSubmit()
+	{
+        var text = InputBox.Text;
+        InputBox.Text = "";
+		InputBox.Focus();
+		Log.Info($"Text submitted: {text}");
+		Text = text;
+		if (Parent is Terminal terminal) {
+			terminal.OnTextSubmit(text);
+		} 
+	}
+}

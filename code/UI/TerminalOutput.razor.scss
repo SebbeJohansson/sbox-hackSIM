@@ -1,0 +1,15 @@
+TerminalOutput {
+	width: 100%;
+	flex-grow: 1;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	
+	overflow-y: scroll;
+	overflow-x: hidden;
+
+	.output-line {
+		padding: 15px;
+	}
+}

@@ -1,0 +1,22 @@
+TerminalInput {
+	width: 100%;
+	flex-shrink: 0;
+	border-top: 1px solid #fff;
+	flex-direction: row;
+	align-items: center;
+
+	.prefix {
+		pointer-events: none;
+		color: #fff;
+		flex-shrink: 0;
+	}
+
+	TextEntry {
+		pointer-events: all;
+		width: 100%;
+		// border-top: 1px solid #fff;
+		label {
+			// color: #fff;
+		}
+	}
+}
