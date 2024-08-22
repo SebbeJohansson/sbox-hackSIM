@@ -1,0 +1,21 @@
+{
+  "RootObject": {
+    "__guid": "9b53b85f-6051-4e6a-a145-1e20d2227e60",
+    "Flags": 0,
+    "Name": "Player",
+    "Position": "-126.4292,-187.5311,115.5769",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Vrtx.Player",
+        "__guid": "2537ec9e-ae7b-425f-a492-f9416743cc0b"
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

@@ -2,6 +2,27 @@
   "__guid": "325a4042-0696-43dd-a79d-dcc314299ba3",
   "GameObjects": [
     {
+      "__guid": "fd71107f-c677-4d2f-8f96-943073f4bdc0",
+      "Flags": 0,
+      "Name": "GameController",
+      "Position": "-126.4292,-187.5311,115.5769",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Vrtx.GameController",
+          "__guid": "2c27bb12-4c6d-49bf-95bc-f88b818db5df"
+        },
+        {
+          "__type": "Vrtx.GameNetworkController",
+          "__guid": "bdb0aa93-8603-468d-a6fb-4b9c0092f43a",
+          "PlayerPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/player.prefab"
+          }
+        }
+      ]
+    },
+    {
       "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
       "Flags": 0,
       "Name": "Sun",
@@ -212,7 +233,6 @@
           "Name": "World",
           "Position": "-25.96661,-0.4614906,0.7353175",
           "Scale": "1.775288,1.775288,1.775288",
-          "Enabled": true,
           "Components": [
             {
               "__type": "Sandbox.WorldPanel",
@@ -323,6 +343,51 @@
         {
           "__type": "ScreenComponent",
           "__guid": "b3688d0b-11ec-4cc2-9884-433897f0f118"
+        }
+      ]
+    },
+    {
+      "__guid": "4ad7696c-b5a8-4975-afe5-bc628e4ae721",
+      "Flags": 0,
+      "Name": "Test Base Device",
+      "Position": "-126.4292,-187.5311,115.5769",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Vrtx.Devices.BaseDevice",
+          "__guid": "aa3cb6af-dd8c-4dfe-a31b-7a844f807ff0",
+          "Ip": "192.1.1.1.1",
+          "Name": "Test Device 1"
+        }
+      ]
+    },
+    {
+      "__guid": "c20afdc6-6651-45e6-b62f-2c4c8435bd70",
+      "Flags": 0,
+      "Name": "Test IOT Device",
+      "Position": "-126.4292,-187.5311,115.5769",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Vrtx.Devices.IOTDevice",
+          "__guid": "1eddad19-df78-4908-8e76-6ff07aac410a",
+          "Ip": "192.1.1.1.2",
+          "Name": "Test IOT Device"
+        }
+      ]
+    },
+    {
+      "__guid": "0ea9a633-88ed-429a-b4eb-3d48e8c19c39",
+      "Flags": 0,
+      "Name": "Test Computer",
+      "Position": "-126.4292,-187.5311,115.5769",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Vrtx.Devices.Computer",
+          "__guid": "72f3d9fa-32e3-498b-ace1-6f61586e9ac2",
+          "Ip": "192.1.1.1.3",
+          "Name": "Test Computer 1"
         }
       ]
     }

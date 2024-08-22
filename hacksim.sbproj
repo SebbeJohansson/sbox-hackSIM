@@ -1,7 +1,7 @@
 {
   "Title": "hackSIM",
   "Type": "game",
-  "Org": "local",
+  "Org": "vrtx",
   "Ident": "hacksim",
   "Schema": 1,
   "IncludeSourceFiles": false,
@@ -30,7 +30,10 @@
       "Nullables": true,
       "Whitelist": true,
       "AssemblyReferences": [],
-      "IgnoreFolders": [],
+      "IgnoreFolders": [
+        "editor",
+        "unittest"
+      ],
       "DistinctAssemblyReferences": []
     }
   }

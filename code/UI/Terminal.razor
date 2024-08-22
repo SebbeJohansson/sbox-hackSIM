@@ -1,15 +1,31 @@
 @using Sandbox;
 @using Sandbox.UI;
+@using Vrtx;
+@using Vrtx.Devices
 @attribute [StyleSheet ("./Terminal.scss")]
 
 <root class="terminal">
-	<div class="title">My terminal</div>
 	<TerminalOutput @ref="Output"/>
 	<TerminalInput />
 </root>
 
 @code {
 	private TerminalOutput Output;
+	
+	public Terminal()
+	{
+	}
+
+    protected override void OnAfterTreeRender( bool firstTime )
+    {
+        if ( firstTime )
+        {
+			var devices = Game.ActiveScene.Components.GetAll<BaseDevice>().ToList();
+			Output.AddLine("Welcome to the terminal!");
+			Output.AddLine("There are " + devices.Count.ToString() + " devices in the known network.");
+			devices.ForEach(device => Output.AddLine($"Device: {device.Name}@{device.Ip}"));
+        }
+    }
 
 	public void OnTextSubmit(string text)
 	{
