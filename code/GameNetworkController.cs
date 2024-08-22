@@ -26,7 +26,7 @@ namespace Vrtx
 		{
 		}
 
-		/// <summary>
+		/* /// <summary>
 		/// Looks for existing players, and reuses if one exists taht is applicable.
 		/// </summary>
 		/// <param name="connection"></param>
@@ -69,9 +69,9 @@ namespace Vrtx
 				Log.Error( e );
 				return null;
 			}
-		}
+		} */
 
-		/// <summary>
+		/* /// <summary>
 		/// Called when a network connection becomes active
 		/// </summary>
 		/// <param name="connection"></param>
@@ -87,18 +87,18 @@ namespace Vrtx
 
 			// OnPlayerJoined( playerState, channel );
 		}
+ */
 
-
-		public void AddPlayer( Connection connection )
+		public void AddPlayer( Player player, Connection connection )
 		{
 			Log.Info( $"Adding player: {connection.Id} {connection.DisplayName}" );
 			try
 			{
 
-				Player? player = GetOrCreatePlayer( connection );
+				// Player? player = GetOrCreatePlayer( connection );
 				if (!player.IsValid() || player == null)
 				{
-					Log.Error( $"Failed to create player object for player {connection.DisplayName}. Again... this should never happen." );
+					Log.Error( $"Failed to get player object for player {connection.DisplayName}. This should never happen. Player was not added to list." );
 					return;
 				}
 
