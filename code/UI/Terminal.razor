@@ -2,6 +2,7 @@
 @using Sandbox.UI;
 @using Vrtx;
 @using Vrtx.Devices
+@inherits Panel
 @attribute [StyleSheet ("./Terminal.scss")]
 
 <root class="terminal">
@@ -10,13 +11,9 @@
 </root>
 
 @code {
-	private TerminalOutput Output;
-	
-	public Terminal()
-	{
-	}
+	private TerminalOutput Output = default!;
 
-    protected override void OnAfterTreeRender( bool firstTime )
+	protected override void OnAfterTreeRender( bool firstTime )
     {
         if ( firstTime )
         {

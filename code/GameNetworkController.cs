@@ -10,7 +10,7 @@ namespace Vrtx
 		public required GameObject PlayerPrefab { get; set; }
 		public static GameNetworkController Instance => _instance!;
 
-		[HostSync]
+		[Sync(SyncFlags.FromHost)]
 		public NetDictionary<Guid, Player> Players { get; set; } = new NetDictionary<Guid, Player>();
 
 		public GameNetworkController()

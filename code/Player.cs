@@ -17,7 +17,7 @@ namespace Vrtx
 				return;
 			}
 			Log.Info( "Player started" );
-			controller.AddPlayer( this, GameObject.Network.OwnerConnection );
+			controller.AddPlayer( this, GameObject.Network.Owner );
 			// var devices = Game.ActiveScene.Components.GetAll<BaseDevice>().ToList();
 			// devices.ForEach(device => Log.Info($"Device: {device.Name}@{device.Ip}"));
 		}

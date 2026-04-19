@@ -7,14 +7,14 @@
 
 <root>
 	<span class="prefix"> This is the prefix ></span>
-	<TextEntry MaxLength=@(150) @ref="InputBox" onsubmit="@OnTextSubmit" @CaretColor="#0af149"></TextEntry>
+	<TextEntry MaxLength=@(150) @ref="InputBox" onsubmit="@OnTextSubmit"></TextEntry>
 </root>
 
 
 @code {
 	private string Text = "Type here";
 
-	private TextEntry InputBox;
+	private TextEntry InputBox = default!;
 
 
     protected override void OnAfterTreeRender( bool firstTime )
